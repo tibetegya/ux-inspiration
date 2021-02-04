@@ -1,0 +1,96 @@
+$nav-height: 72px;
+.app {
+  display: flex;
+  flex-wrap: nowrap;
+  &>div {
+    min-height: 100vh;
+  }
+}
+
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  border: 1px solid red;
+  position: relative;
+  overflow-y: scroll;
+  .logo-container {
+    width: 100%;
+    height: $nav-height;
+    border: 1px solid lightblue;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+  }
+  .nav-container {
+    height: calc(200vh - #{$nav-height});
+    z-index: 10;
+    .nav-section {
+      border: 1px solid green;
+      padding: 15px 0px;
+      .nav-section-title {
+        padding-left: 32px;
+        margin: 10px 0px;
+      }
+      .navlink-container {
+        list-style: none;
+        padding: 0px;
+        .navlnk-item {
+          display: inline-block;
+          width: 100%;
+          margin: 10px 0px;
+        }
+      }
+      .navlink {
+        padding-left: 32px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        &:hover {
+          color: inherit;
+        }
+        img {
+          width: 24px;
+          height: 24px;
+          border: 1px solid red;
+        }
+        span {
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+}
+
+.mainbar {
+  border: 1px solid green;
+  flex-grow: 1;
+  display: flex;
+  &>div {
+    min-height: 100vh;
+  }
+}
+
+.content-bar {
+  border: 1px solid blue;
+  flex-grow: 1;
+}
+
+.right-bar {
+  width: 280px;
+  border: 1px solid orange;
+  .title-container {
+    width: 100%;
+    padding-bottom: 24px;
+    height: $nav-height;
+    border: 1px solid lightblue;
+  }
+  
+}
+
+.navbar {
+  width: 100%;
+  padding-bottom: 24px;
+  height: $nav-height;
+  border: 1px solid lightblue;
+}
